@@ -1,7 +1,8 @@
-from flask import Flask
+import os
+from flask import Flask, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='../public')
 
 @app.route('/')
 def hello():
-    return 'Yes, it works! Amazing! Hej Matilda!'
+    return render_template('index.html', publicPath=os.environ.get('PUBLIC_PATH', '/public'))

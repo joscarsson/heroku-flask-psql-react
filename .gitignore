@@ -1,4 +1,6 @@
-venv
-.vagrant
+/venv
+/.vagrant
 *.log
 __pycache__
+/public
+/node_modules
